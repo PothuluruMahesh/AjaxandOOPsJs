@@ -1,0 +1,17 @@
+﻿<script>
+    function Employee(firstName, lastName)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    Employee.prototype.fullName = function ()
+    {
+        return this.firstName + " " + this.lastName;
+    }
+
+    var employee1 = new Employee("Mithali", "Raj");
+    var employee2 = new Employee("kane", "Williamson");
+    document.writeln("<b>"+employee1.fullName()+"</b>" + "<br><br>");
+    document.writeln("<h2><b><i><font color='cyan'>"+employee2.fullName()+"</font></i></b></h2>");
+</script>  

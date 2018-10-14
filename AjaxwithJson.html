@@ -1,0 +1,33 @@
+﻿<html>
+<head>
+        <script>
+            function fun() {
+                var data = "JSON.json";
+                var request = new XMLHttpRequest();
+                request.onreadystatechange = function () {
+                    if (request.readyState == 4 && request.status == 200) {
+                        var Obj = JSON.parse(request.responseText);
+                        document.getElementById("N").innerHTML = Obj.College;
+                        document.getElementById("C").innerHTML = Obj.Sname;
+                    }
+                }
+                request.open("GET", data, true);
+                request.send();
+            }
+        </script>
+</head>
+<body>
+    <table class="src">
+        
+        <tr>
+            <td><div id="N"></div></td>
+            <td><div id="C"></div></td>
+        </tr>
+    </table>
+    <div class="central">
+        <button type="button" onclick="fun()">Click! </button>
+    </div>
+</body>
+</html>
+
+
